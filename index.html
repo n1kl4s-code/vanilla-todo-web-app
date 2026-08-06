@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You have TODO it!</title>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/toast.css">
+    <script src="./js/index.js" type="module" defer></script>
+</head>
+<body>
+    <div class="main">
+        <div id="top-bar">
+            <div id="top-search-bar">
+                <div id="search-bar-icon-mask"></div>
+                <input type="text" id="search-bar-input" placeholder="Search TODOs by title...">
+            </div>
+            <div id="todo-filter-btn"></div>
+        </div>
+        <div id="todo-list">
+            <p id="no-search-results-hint">No search results...&nbsp;🤔</p>
+        </div>
+        <button id="add-todo-btn" class="btn primary-btn">
+            <div id="add-todo-btn-inner"></div>
+        </button>
+        <div id="fixed-todo-form-container">
+            <div id="todo-form-container">
+                <form id="todo-form">
+                    <!-- TODO: todo icon select -->
+                    <div class="todo-form-container">
+                        <label for="todo-icon-select">Icon <span class="required-marker">*</span></label>
+                        <select name="todo-icon" id="todo-icon-select" class="todo-form-container-input" required>
+                            <option disabled>Select an icon...</option>
+                            <option value="✅">✅</option>
+                            <option value="⚠️">⚠️</option>
+                            <option value="💡">💡</option>
+                            <option value="🚫">🚫</option>
+                        </select>
+                    </div>
+                    <div class="todo-form-container">
+                        <label for="todo-title-input">Title <span class="required-marker">*</span></label>
+                        <input type="text" name="todo-title" id="todo-title-input" class="todo-form-container-input" required autocomplete="off">
+                        <small class="todo-form-container-length-display">
+                            <span id="todo-title-length-display">0</span>
+                            /
+                            <span id="todo-title-max-length-display">50</span>
+                        </small>
+                    </div>
+                    <div class="todo-form-container">
+                        <label for="todo-description-input">Description</label>
+                        <textarea name="todo-description" id="todo-description-input" class="todo-form-container-input" autocomplete="off"></textarea>
+                        <small class="todo-form-container-length-display">
+                            <span id="todo-description-length-display">0</span>
+                            /
+                            <span id="todo-description-max-length-display">250</span>
+                        </small>
+                    </div>
+                    <div id="form-actions-container">
+                        <!-- button in form ist wie ein submit input (Quelle: ChatGPT) -->
+                        <button class="btn secondary-btn" id="reset-todo-form-btn" type="button">
+                            <div id="reset-todo-form-btn-inner"></div>
+                        </button>
+                        <button class="btn primary-btn" id="submit-todo-form-btn" type="button" disabled>
+                            <div id="submit-todo-form-btn-inner"></div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
