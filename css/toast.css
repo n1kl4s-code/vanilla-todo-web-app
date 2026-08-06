@@ -109,7 +109,7 @@
     /* background-color: rgb(var(--accent)); */
     opacity: 0.5;
     cursor: pointer;
-    mask-image: url("/icons/toasts/dismiss.svg");
+    mask-image: url("../icons/toasts/dismiss.svg");
     mask-mode: luminance;
     mask-size: contain;
     mask-position: center;
